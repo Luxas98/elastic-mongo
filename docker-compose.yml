@@ -30,7 +30,7 @@ mongo1:
 
 elasticsearch:
   hostname: elasticsearch
-  image: stabenfeldt/elasticsearch-marvel
+  image: elasticsearch
   ports:
     - "9200:9200"
     - "9300:9300"
@@ -78,7 +78,7 @@ mongosetup:
 # https://github.com/compose/transporter
 # https://www.compose.io/articles/transporter-driving-part-one/
 transporter:
-  image: golang:1.5
+  image: golang
   links:
     - mongo1:mongo1
     - mongo2:mongo2
